@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ImmoEliza</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -14,11 +15,10 @@
     <form method="POST">
 
         <label for="area">Area</label>
-        <input id="area" name="area" type="number" required></br>
+        <input id="area" name="area" type="number" min="0" value="0" required></br>
         </br>
 
         <label for="property"> Type of property </label></br>
-        </br>
         <input type="radio" value="APARTMENT" name="type" required>
         <label for="Apartment"> Apartment</label></br>
 
@@ -30,80 +30,163 @@
         </br>
 
         <label for="area">Number of rooms</label>
-        <input id="room" name="area" type="number" required> </br>
+        <input id="room" name="area" type="number" min="1" value="1" required> </br>
         </br>
 
-        <label for="zipcode">Zip Code</label>
+        <label for="zipcode">Belgian zip-code</label>
         <input id="zip" name="zipcode" type="number" required></br>
         </br>
 
-        <label for="landArea">Land Area</label>
-        <input id="land" name="landarea" type="number"></br>
-        </br>
+        <!-- <label for="landArea">Land Area</label>
+        <input id="land" name="landArea" type="number" value="0"></br>
+        </br> -->
 
+        <!--checkbox is for the "type - boolean" -->
+        <!--Here we didn't use checked after the checkbox. So default it is False-->
+        <!---- checked means True-->
         <label for="garden">Garden</label>
-        <input id="garden" name="garden" type="boolean"></br>
+        <label> <input id="garden" name="garden" type="checkbox">Yes
+        </label>
+        <label><input id="garden" name="garden" type="checkbox" checked>No</br></label>
         </br>
 
         <label for="gardenArea">Garden Area</label>
-        <input id="gardenArea" name="gardenArea" type="integer"></br>
+        <input id="gardenArea" name="gardenArea" type="number"></br>
         </br>
 
         <label for="equippedKitchen">Equipped Kitchen</label>
-        <input id="equippedKitchen" name="equippedKitchen" type="boolean"></br>
+        <label><input id="equippedKitchen" name="equippedKitchen" type="checkbox">Yes</label>
+        <label><input id="equippedKitchen" name="equippedKitchen" type="checkbox" checked>No</br></label>
         </br>
 
         <label for="swimmingPool">Swimming Pool</label>
-        <input id="swimmingPool" name="swimmingPool" type="boolean"></br>
+        <label><input id="swimmingPool" name="swimmingPool" type="checkbox">Yes</label>
+        <label><input id="swimmingPool" name="swimmingPool" type="checkbox" checked>No</br></label>
         </br>
 
         <label for="furnished">Furnished</label>
-        <input id="furnished" name="furnished" type="boolean"></br>
+        <label><input id="furnished" name="furnished" type="checkbox">Yes</label>
+        <label><input id="furnished" name="furnished" type="checkbox" checked>No</br></label>
         </br>
 
         <label for="openFire">Open Fire</label>
-        <input id="openFire" name="openFire" type="boolean"></br>
+        <label><input id="openFire" name="openFire" type="checkbox">Yes</label>
+        <label><input id="openFire" name="openFire" type="checkbox" checked>No</br></label>
         </br>
 
         <label for="terrace">Terrace</label>
-        <input id="terrace" name="terrace" type="boolean"></br>
+        <label><input id="terrace" name="terrace" type="checkbox">Yes</label>
+        <label><input id="terrace" name="terrace" type="checkbox" checked>No</br></label>
         </br>
 
         <label for="terraceArea">Terrace Area</label>
-        <input id="terraceArea" name="terraceArea" type="integer"></br>
+        <input id="terraceArea" name="terraceArea" type="number"></br>
         </br>
 
         <label for="facadesNumber">Facades Number</label>
-        <input id="facadesNumber" name="facadesNumber" type="integer"></br>
+        <input id="facadesNumber" name="facadesNumber" type="number"></br>
         </br>
 
         <label for="buildingState"> Building State </label></br>
-        </br>
-        <input type="radio" value="NEW" name="type">
+        <input type="radio" value="NEW" name="building">
         <label for="new"> New</label></br>
 
-        <input type="radio" value="GOOD" name="type">
+        <input type="radio" value="GOOD" name="building">
         <label for="good"> Good</label></br>
 
-        <input type="radio" value="TO RENOVATE" name="type">
+        <input type="radio" value="TO RENOVATE" name="building">
         <label for="toRenovate"> To Renovate</label></br>
 
-        <input type="radio" value="JUST RENOVATED" name="type">
+        <input type="radio" value="JUST RENOVATED" name="building">
         <label for="justRenovated"> Just Renovated</label></br>
 
-        <input type="radio" value="TO REBUILD" name="type">
+        <input type="radio" value="TO REBUILD" name="building">
         <label for="toRebuild"> To Rebuild</label></br>
         </br>
 
+        <div class="form-group">
+            <input type="number" class="form-control" id="inputHouseNo" placeholder="House Number">
 
+            <input type="street" class="form-control " id="inputStreet" placeholder="Street Name ">
 
+            <input type="municipality" class="form-control" id="inputCity " placeholder="Municipality ">
 
+            <input type="postCode" class="form-control" id="inputPostCode " placeholder="PostCode "></br>
+        </div>
+        </br>
+        </br>
+        </br>
 
-        <input id="submit" type="button" value="submit">
+        <label for="propertySub"> Property Subtype </label></br>
+        <input type="radio" value="APARTMENT" name="subtype" checked>
+        <label for="Apartment"> Apartment</label></br>
+
+        <input type="radio" value="APARTMENT_BLOCK" name="subtype">
+        <label for="AptBlock"> Apartment Block</label></br>
+
+        <input type="radio" value="BUNGALOW" name="subtype">
+        <label for="bungalow"> Bungalow</label></br>
+
+        <input type="radio" value="COUNTRY_COTTAGE" name="subtype">
+        <label for="countryCottage"> Country Cottage</label></br>
+
+        <input type="radio" value="DUPLEX" name="subtype">
+        <label for="duplex"> Duplex</label></br>
+
+        <input type="radio" value="EXCEPTIONAL_PROPERTY" name="subtype">
+        <label for="expProperty">Exceptional Property</label></br>
+
+        <input type="radio" value="FARMHOUSE" name="subtype">
+        <label for="farmHouse"> Farmhouse</label></br>
+
+        <input type="radio" value="FLAT_STUDIO" name="subtype">
+        <label for="flatStudio"> Flat Studio</label></br>
+
+        <input type="radio" value="GROUND_FLOOR" name="subtype">
+        <label for="groundFloor">Ground Floor</label></br>
+
+        <input type="radio" value="HOUSE" name="subtype">
+        <label for="house"> House</label></br>
+
+        <input type="radio" value="KOT" name="subtype">
+        <label for="kot"> Kot</label></br>
+
+        <input type="radio" value="LOFT" name="subtype">
+        <label for="loft"> Loft</label></br>
+
+        <input type="radio" value="MANOR_HOUSE" name="subtype">
+        <label for="manorHouse">Manor House </label></br>
+
+        <input type="radio" value="MANSION" name="subtype">
+        <label for="mansion"> Mansion</label></br>
+
+        <input type="radio" value="MIXED_USE_BUILDING" name="subtype">
+        <label for="mixedBuild"> Mixed Use Building</label></br>
+
+        <input type="radio" value="OTHER_PROPERTY" name="subtype">
+        <label for="otherProp"> Other Property</label></br>
+
+        <input type="radio" value="PENTHOUSE" name="subtype">
+        <label for="pentHouse"> Penthouse</label></br>
+
+        <input type="radio" value="SERVICE_FLAT" name="subtype">
+        <label for="serviceFlat"> Service Flat</label></br>
+
+        <input type="radio" value="TOWN_HOUSE" name="subtype">
+        <label for="townHouse"> Town House</label></br>
+
+        <input type="radio" value="TRIPLEX" name="subtype">
+        <label for="triplex"> Triplex</label></br>
+
+        <input type="radio" value="VILLA" name="subtype">
+        <label for="villa"> Villa</label></br>
+        </br>
     </form>
+    <button id="submit" type="submit" form="form1" value="Submit">Submit</button>
 
 
-    <script type="text/javascript" src="script.js"></script>
+
+    <script type="text/javascript " src="script.js "></script>
 </body>
 
 </html>
