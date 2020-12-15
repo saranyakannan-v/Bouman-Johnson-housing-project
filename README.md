@@ -15,7 +15,7 @@ The app Will be quite simple. It only needs Two things. First. A form. The form 
 - backend: connecting to a homemade api using javascript and fetch (or in another way ;) ) - >fetch on MDN
 - frontend: building a user friendly form and a clear result page.
   
-## features
+## Features
 
 - One form
 - Display of results   
