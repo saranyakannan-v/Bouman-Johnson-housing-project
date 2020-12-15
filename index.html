@@ -37,17 +37,17 @@
         <input id="zip" name="zipcode" type="number" required></br>
         </br>
 
-        <!-- <label for="landArea">Land Area</label>
+        <label for="landArea">Land Area</label>
         <input id="land" name="landArea" type="number" value="0"></br>
-        </br> -->
+        </br>
 
         <!--checkbox is for the "type - boolean" -->
         <!--Here we didn't use checked after the checkbox. So default it is False-->
         <!---- checked means True-->
         <label for="garden">Garden</label>
-        <label> <input id="garden" name="garden" type="checkbox">Yes
+        <label> <input id="garden" name="garden" type="radio">Yes
         </label>
-        <label><input id="garden" name="garden" type="checkbox" checked>No</br></label>
+        <label><input id="garden" name="garden" type="radio" checked>No</br></label>
         </br>
 
         <label for="gardenArea">Garden Area</label>
@@ -55,28 +55,28 @@
         </br>
 
         <label for="equippedKitchen">Equipped Kitchen</label>
-        <label><input id="equippedKitchen" name="equippedKitchen" type="checkbox">Yes</label>
-        <label><input id="equippedKitchen" name="equippedKitchen" type="checkbox" checked>No</br></label>
+        <label><input id="equippedKitchen" name="equippedKitchen" type="radio">Yes</label>
+        <label><input id="equippedKitchen" name="equippedKitchen" type="radio" checked>No</br></label>
         </br>
 
         <label for="swimmingPool">Swimming Pool</label>
-        <label><input id="swimmingPool" name="swimmingPool" type="checkbox">Yes</label>
-        <label><input id="swimmingPool" name="swimmingPool" type="checkbox" checked>No</br></label>
+        <label><input id="swimmingPool" name="swimmingPool" type="radio">Yes</label>
+        <label><input id="swimmingPool" name="swimmingPool" type="radio" checked>No</br></label>
         </br>
 
         <label for="furnished">Furnished</label>
-        <label><input id="furnished" name="furnished" type="checkbox">Yes</label>
-        <label><input id="furnished" name="furnished" type="checkbox" checked>No</br></label>
+        <label><input id="furnished" name="furnished" type="radio">Yes</label>
+        <label><input id="furnished" name="furnished" type="radio" checked>No</br></label>
         </br>
 
         <label for="openFire">Open Fire</label>
-        <label><input id="openFire" name="openFire" type="checkbox">Yes</label>
-        <label><input id="openFire" name="openFire" type="checkbox" checked>No</br></label>
+        <label><input id="openFire" name="openFire" type="radio">Yes</label>
+        <label><input id="openFire" name="openFire" type="radio" checked>No</br></label>
         </br>
 
         <label for="terrace">Terrace</label>
-        <label><input id="terrace" name="terrace" type="checkbox">Yes</label>
-        <label><input id="terrace" name="terrace" type="checkbox" checked>No</br></label>
+        <label><input id="terrace" name="terrace" type="radio">Yes</label>
+        <label><input id="terrace" name="terrace" type="radio" checked>No</br></label>
         </br>
 
         <label for="terraceArea">Terrace Area</label>
@@ -104,15 +104,8 @@
         <label for="toRebuild"> To Rebuild</label></br>
         </br>
 
-        <div class="form-group">
-            <input type="number" class="form-control" id="inputHouseNo" placeholder="House Number">
-
-            <input type="street" class="form-control " id="inputStreet" placeholder="Street Name ">
-
-            <input type="municipality" class="form-control" id="inputCity " placeholder="Municipality ">
-
-            <input type="postCode" class="form-control" id="inputPostCode " placeholder="PostCode "></br>
-        </div>
+        <label for="address">Address</label>
+        <input style="width : 300px" type="text" name="address" id="address" placeholder="10,Cantersteen,Bruxelles,1000">
         </br>
         </br>
         </br>

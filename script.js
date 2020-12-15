@@ -7,30 +7,32 @@
      console.log(roomNumber);
      let zipCode = new Number(document.getElementById('zip').value);
      console.log(zipCode);
-     let landAreaValue = new Number(document.getElementsById("land").value);
+     let landAreaValue = new Number(document.getElementById("land").value);
      console.log(landAreaValue);
-     let garden = document.querySelector("input[name='garden']:checked").value;
+     let garden = document.querySelector("input[name='garden']:checked").checked;
      console.log(garden);
-     let gardenAreaValue = new Number(document.getElementsById("gardenArea").value);
+     let gardenAreaValue = new Number(document.getElementById("gardenArea").value);
      console.log(gardenAreaValue);
-     let equippedkitchen = document.querySelector("input[name='equippedKitchen']:checked").value;
+     let equippedkitchen = document.querySelector("input[name='equippedKitchen']:checked").checked;
      console.log(equippedkitchen);
-     let swimmingpool = document.querySelector("input[name='swimmingPool']:checked").value;
+     let swimmingpool = document.querySelector("input[name='swimmingPool']:checked").checked;
      console.log(swimmingpool);
-     let furnished = document.querySelector("input[name='furnished']:checked").value;
+     let furnished = document.querySelector("input[name='furnished']:checked").checked;
      console.log(furnished);
-     let openfire = document.querySelector("input[name='openFire']:checked").value;
+     let openfire = document.querySelector("input[name='openFire']:checked").checked;
      console.log(openfire);
-     let terrace = document.querySelector("input[name='terrace']:checked").value;
+     let terrace = document.querySelector("input[name='terrace']:checked").checked;
      console.log(terrace);
-     let terraceAreaValue = new Number(document.getElementsById("terraceArea").value);
+     let terraceAreaValue = new Number(document.getElementById("terraceArea").value);
      console.log(terraceAreaValue);
-     let facadesNumberValue = new Number(document.getElementsById("facadesNumber").value);
+     let facadesNumberValue = new Number(document.getElementById("facadesNumber").value);
      console.log(facadesNumberValue);
      let buildingState = document.querySelector("input[name='building']:checked").value;
      console.log(buildingState);
-     let address = document.getElementsByClassName("form-group").value;
-     console.log(address);
+     let address = document.getElementById("address").value;
+     let arrayAddress = address.split(" ");
+     let finalAddress = arrayAddress.join(",");
+     console.log(finalAddress);
      let propertysubtype = document.querySelector("input[name='subtype']:checked").value;
      console.log(propertysubtype);
 
@@ -52,14 +54,14 @@
              "terrace-area": terraceAreaValue,
              "facades-number": facadesNumberValue,
              "building-state": buildingState,
-             "full-address": address,
+             "full-address": finalAddress,
              "property-subtype": propertysubtype
          }
      }
      console.log(data);
 
      const proxyurl = "https://cors-anywhere.herokuapp.com/";
-     const url = "http://cnos.herokuapp.com/predict";
+     const url = "http://cnos4.herokuapp.com/predict";
      fetch(proxyurl + url, {
              method: 'POST',
              body: JSON.stringify(data), // packaging up all of my data and send it as a stringify, the javascrpit object data and make it into a JSON string.
