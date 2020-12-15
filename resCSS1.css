@@ -1,0 +1,27 @@
+/* ----CSS for screen size (max-width:600px and min-width:351px)---- */
+
+h1 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 14px;
+}
+
+label {
+    font-size: 12px;
+}
+
+button {
+    padding: 5px;
+}
+
+input[type=number],
+input[type=text] {
+    padding: 8px;
+}
+
+div#real {
+    width: 80%;
+    margin: 10px 30% 10px 11%;
+}

@@ -9,19 +9,19 @@
      console.log(zipCode);
      let landAreaValue = new Number(document.getElementById("land").value);
      console.log(landAreaValue);
-     let garden = document.querySelector("input[name='garden']:checked").checked;
+     let garden = document.querySelector("input[name='garden']").checked;
      console.log(garden);
      let gardenAreaValue = new Number(document.getElementById("gardenArea").value);
      console.log(gardenAreaValue);
-     let equippedkitchen = document.querySelector("input[name='equippedKitchen']:checked").checked;
+     let equippedkitchen = document.querySelector("input[name='equippedKitchen']").checked;
      console.log(equippedkitchen);
-     let swimmingpool = document.querySelector("input[name='swimmingPool']:checked").checked;
+     let swimmingpool = document.querySelector("input[name='swimmingPool']").checked;
      console.log(swimmingpool);
-     let furnished = document.querySelector("input[name='furnished']:checked").checked;
+     let furnished = document.querySelector("input[name='furnished']").checked;
      console.log(furnished);
-     let openfire = document.querySelector("input[name='openFire']:checked").checked;
+     let openfire = document.querySelector("input[name='openFire']").checked;
      console.log(openfire);
-     let terrace = document.querySelector("input[name='terrace']:checked").checked;
+     let terrace = document.querySelector("input[name='terrace']").checked;
      console.log(terrace);
      let terraceAreaValue = new Number(document.getElementById("terraceArea").value);
      console.log(terraceAreaValue);
@@ -69,8 +69,32 @@
                  'Content-Type': 'application/json'
              }
          })
-         .then(response => response.json()) // convert to json
-         .then(contents => console.log(contents)) //print data to console
-         .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?")) // Catch errors
+         .then(response => response.json()) // API response to the data sent and convert it into json                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+         .then((data) => {
+             console.log(data); //print data to console
+             console.log(data.prediction); //comes as a string
 
+             let propertyValue = data.prediction.slice(22, -3); //slice the begining and end of the string to keep only the digits 
+             console.log(propertyValue);
+
+             propertyValue = new Number(propertyValue); // Transformed digits into a number
+             console.log(new Number(propertyValue));
+
+             propertyValue = new Number(propertyValue.toFixed(2)); // Limited decimals to only 2
+             console.log(new Number(propertyValue));
+             const formatter = new Intl.NumberFormat('de-DE', {
+                 style: 'currency',
+                 currency: 'EUR',
+                 minimumFractionDigits: 0,
+                 maximumFractionDigits: 0
+             })
+             console.log(formatter.format(propertyValue));
+             let form = document.getElementById('form');
+             form.insertAdjacentHTML("beforeend", "<h2> The Estimated Price of your house is " + propertyValue + " euros</h2>")
+                 //alert("The Estimated Price of your house is  " + propertyValue + ' euros');
+         })
+         .catch(error => {
+             console.log('error!'); // catch the error
+             console.log(error);
+         });
  });

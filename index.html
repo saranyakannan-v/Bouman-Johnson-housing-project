@@ -6,178 +6,182 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ImmoEliza</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px) and (min-width: 351px)" href="resCSS1.css" />
+    <link rel="stylesheet" media="screen and (max-width: 350px)" href="resCSS2.css" />
 </head>
 
 <body>
 
     <h1> Belgian Real Estate Property</h1>
+    <div class="container" id="real">
+        <form method="POST" id="form">
 
-    <form method="POST">
+            <label for="area">Area</label>
+            <input id="area" name="area" type="number" min="0" value="0" required></br>
+            </br>
 
-        <label for="area">Area</label>
-        <input id="area" name="area" type="number" min="0" value="0" required></br>
-        </br>
+            <label for="property"> Type of property </label></br>
 
-        <label for="property"> Type of property </label></br>
-        <input type="radio" value="APARTMENT" name="type" required>
-        <label for="Apartment"> Apartment</label></br>
+            <input type="radio" value="APARTMENT" name="type" required>
+            <label for="Apartment"> Apartment</label></br>
 
-        <input type="radio" value="HOUSE" name="type" required>
-        <label for="House"> House</label></br>
+            <input type="radio" value="HOUSE" name="type" required>
+            <label for="House"> House</label></br>
 
-        <input type="radio" value="OTHERS" name="type" required>
-        <label for="Others"> Others</label></br>
-        </br>
+            <input type="radio" value="OTHERS" name="type" required>
+            <label for="Others"> Others</label></br>
+            </br>
 
-        <label for="area">Number of rooms</label>
-        <input id="room" name="area" type="number" min="1" value="1" required> </br>
-        </br>
+            <label for="area">Number of rooms</label>
+            <input id="room" name="area" type="number" min="1" value="1" required> </br>
+            </br>
 
-        <label for="zipcode">Belgian zip-code</label>
-        <input id="zip" name="zipcode" type="number" required></br>
-        </br>
+            <label for="zipcode">Belgian zip-code</label>
+            <input id="zip" name="zipcode" type="number" required></br>
+            </br>
 
-        <label for="landArea">Land Area</label>
-        <input id="land" name="landArea" type="number" value="0"></br>
-        </br>
+            <label for="landArea">Land Area</label>
+            <input id="land" name="landArea" type="number" value="0"></br>
+            </br>
 
-        <!--checkbox is for the "type - boolean" -->
-        <!--Here we didn't use checked after the checkbox. So default it is False-->
-        <!---- checked means True-->
-        <label for="garden">Garden</label>
-        <label> <input id="garden" name="garden" type="radio">Yes
+            <!--checkbox is for the "type - boolean" -->
+            <!--Here we didn't use checked after the checkbox. So default it is False-->
+            <!---- checked means True-->
+            <label for="garden">Garden</label>
+            <label> <input id="garden" name="garden" type="radio">Yes
         </label>
-        <label><input id="garden" name="garden" type="radio" checked>No</br></label>
-        </br>
+            <label><input id="garden" name="garden" type="radio" checked>No</br></label>
+            </br>
 
-        <label for="gardenArea">Garden Area</label>
-        <input id="gardenArea" name="gardenArea" type="number"></br>
-        </br>
+            <label for="gardenArea">Garden Area</label>
+            <input id="gardenArea" name="gardenArea" type="number"></br>
+            </br>
 
-        <label for="equippedKitchen">Equipped Kitchen</label>
-        <label><input id="equippedKitchen" name="equippedKitchen" type="radio">Yes</label>
-        <label><input id="equippedKitchen" name="equippedKitchen" type="radio" checked>No</br></label>
-        </br>
+            <label for="equippedKitchen">Equipped Kitchen</label>
+            <label><input id="equippedKitchen" name="equippedKitchen" type="radio">Yes</label>
+            <label><input id="equippedKitchen" name="equippedKitchen" type="radio" checked>No</br></label>
+            </br>
 
-        <label for="swimmingPool">Swimming Pool</label>
-        <label><input id="swimmingPool" name="swimmingPool" type="radio">Yes</label>
-        <label><input id="swimmingPool" name="swimmingPool" type="radio" checked>No</br></label>
-        </br>
+            <label for="swimmingPool">Swimming Pool</label>
+            <label><input id="swimmingPool" name="swimmingPool" type="radio">Yes</label>
+            <label><input id="swimmingPool" name="swimmingPool" type="radio" checked>No</br></label>
+            </br>
 
-        <label for="furnished">Furnished</label>
-        <label><input id="furnished" name="furnished" type="radio">Yes</label>
-        <label><input id="furnished" name="furnished" type="radio" checked>No</br></label>
-        </br>
+            <label for="furnished">Furnished</label>
+            <label><input id="furnished" name="furnished" type="radio">Yes</label>
+            <label><input id="furnished" name="furnished" type="radio" checked>No</br></label>
+            </br>
 
-        <label for="openFire">Open Fire</label>
-        <label><input id="openFire" name="openFire" type="radio">Yes</label>
-        <label><input id="openFire" name="openFire" type="radio" checked>No</br></label>
-        </br>
+            <label for="openFire">Open Fire</label>
+            <label><input id="openFire" name="openFire" type="radio">Yes</label>
+            <label><input id="openFire" name="openFire" type="radio" checked>No</br></label>
+            </br>
 
-        <label for="terrace">Terrace</label>
-        <label><input id="terrace" name="terrace" type="radio">Yes</label>
-        <label><input id="terrace" name="terrace" type="radio" checked>No</br></label>
-        </br>
+            <label for="terrace">Terrace</label>
+            <label><input id="terrace" name="terrace" type="radio">Yes</label>
+            <label><input id="terrace" name="terrace" type="radio" checked>No</br></label>
+            </br>
 
-        <label for="terraceArea">Terrace Area</label>
-        <input id="terraceArea" name="terraceArea" type="number"></br>
-        </br>
+            <label for="terraceArea">Terrace Area</label>
+            <input id="terraceArea" name="terraceArea" type="number"></br>
+            </br>
 
-        <label for="facadesNumber">Facades Number</label>
-        <input id="facadesNumber" name="facadesNumber" type="number"></br>
-        </br>
+            <label for="facadesNumber">Facades Number</label>
+            <input id="facadesNumber" name="facadesNumber" type="number"></br>
+            </br>
 
-        <label for="buildingState"> Building State </label></br>
-        <input type="radio" value="NEW" name="building">
-        <label for="new"> New</label></br>
+            <label for="buildingState"> Building State </label></br>
+            <input type="radio" value="NEW" name="building">
+            <label for="new"> New</label></br>
 
-        <input type="radio" value="GOOD" name="building">
-        <label for="good"> Good</label></br>
+            <input type="radio" value="GOOD" name="building" checked>
+            <label for="good"> Good</label></br>
 
-        <input type="radio" value="TO RENOVATE" name="building">
-        <label for="toRenovate"> To Renovate</label></br>
+            <input type="radio" value="TO RENOVATE" name="building">
+            <label for="toRenovate"> To Renovate</label></br>
 
-        <input type="radio" value="JUST RENOVATED" name="building">
-        <label for="justRenovated"> Just Renovated</label></br>
+            <input type="radio" value="JUST RENOVATED" name="building">
+            <label for="justRenovated"> Just Renovated</label></br>
 
-        <input type="radio" value="TO REBUILD" name="building">
-        <label for="toRebuild"> To Rebuild</label></br>
-        </br>
+            <input type="radio" value="TO REBUILD" name="building">
+            <label for="toRebuild"> To Rebuild</label></br>
+            </br>
 
-        <label for="address">Address</label>
-        <input style="width : 300px" type="text" name="address" id="address" placeholder="10,Cantersteen,Bruxelles,1000">
-        </br>
-        </br>
-        </br>
+            <label for="address">Address</label>
+            <input style="width : 300px" type="text" name="address" id="address" placeholder="10,Cantersteen,Bruxelles,1000">
+            </br>
+            </br>
+            </br>
 
-        <label for="propertySub"> Property Subtype </label></br>
-        <input type="radio" value="APARTMENT" name="subtype" checked>
-        <label for="Apartment"> Apartment</label></br>
+            <label for="propertySub"> Property Subtype </label></br>
+            <input type="radio" value="APARTMENT" name="subtype" checked>
+            <label for="Apartment"> Apartment</label></br>
 
-        <input type="radio" value="APARTMENT_BLOCK" name="subtype">
-        <label for="AptBlock"> Apartment Block</label></br>
+            <input type="radio" value="APARTMENT_BLOCK" name="subtype">
+            <label for="AptBlock"> Apartment Block</label></br>
 
-        <input type="radio" value="BUNGALOW" name="subtype">
-        <label for="bungalow"> Bungalow</label></br>
+            <input type="radio" value="BUNGALOW" name="subtype">
+            <label for="bungalow"> Bungalow</label></br>
 
-        <input type="radio" value="COUNTRY_COTTAGE" name="subtype">
-        <label for="countryCottage"> Country Cottage</label></br>
+            <input type="radio" value="COUNTRY_COTTAGE" name="subtype">
+            <label for="countryCottage"> Country Cottage</label></br>
 
-        <input type="radio" value="DUPLEX" name="subtype">
-        <label for="duplex"> Duplex</label></br>
+            <input type="radio" value="DUPLEX" name="subtype">
+            <label for="duplex"> Duplex</label></br>
 
-        <input type="radio" value="EXCEPTIONAL_PROPERTY" name="subtype">
-        <label for="expProperty">Exceptional Property</label></br>
+            <input type="radio" value="EXCEPTIONAL_PROPERTY" name="subtype">
+            <label for="expProperty">Exceptional Property</label></br>
 
-        <input type="radio" value="FARMHOUSE" name="subtype">
-        <label for="farmHouse"> Farmhouse</label></br>
+            <input type="radio" value="FARMHOUSE" name="subtype">
+            <label for="farmHouse"> Farmhouse</label></br>
 
-        <input type="radio" value="FLAT_STUDIO" name="subtype">
-        <label for="flatStudio"> Flat Studio</label></br>
+            <input type="radio" value="FLAT_STUDIO" name="subtype">
+            <label for="flatStudio"> Flat Studio</label></br>
 
-        <input type="radio" value="GROUND_FLOOR" name="subtype">
-        <label for="groundFloor">Ground Floor</label></br>
+            <input type="radio" value="GROUND_FLOOR" name="subtype">
+            <label for="groundFloor">Ground Floor</label></br>
 
-        <input type="radio" value="HOUSE" name="subtype">
-        <label for="house"> House</label></br>
+            <input type="radio" value="HOUSE" name="subtype">
+            <label for="house"> House</label></br>
 
-        <input type="radio" value="KOT" name="subtype">
-        <label for="kot"> Kot</label></br>
+            <input type="radio" value="KOT" name="subtype">
+            <label for="kot"> Kot</label></br>
 
-        <input type="radio" value="LOFT" name="subtype">
-        <label for="loft"> Loft</label></br>
+            <input type="radio" value="LOFT" name="subtype">
+            <label for="loft"> Loft</label></br>
 
-        <input type="radio" value="MANOR_HOUSE" name="subtype">
-        <label for="manorHouse">Manor House </label></br>
+            <input type="radio" value="MANOR_HOUSE" name="subtype">
+            <label for="manorHouse">Manor House </label></br>
 
-        <input type="radio" value="MANSION" name="subtype">
-        <label for="mansion"> Mansion</label></br>
+            <input type="radio" value="MANSION" name="subtype">
+            <label for="mansion"> Mansion</label></br>
 
-        <input type="radio" value="MIXED_USE_BUILDING" name="subtype">
-        <label for="mixedBuild"> Mixed Use Building</label></br>
+            <input type="radio" value="MIXED_USE_BUILDING" name="subtype">
+            <label for="mixedBuild"> Mixed Use Building</label></br>
 
-        <input type="radio" value="OTHER_PROPERTY" name="subtype">
-        <label for="otherProp"> Other Property</label></br>
+            <input type="radio" value="OTHER_PROPERTY" name="subtype">
+            <label for="otherProp"> Other Property</label></br>
 
-        <input type="radio" value="PENTHOUSE" name="subtype">
-        <label for="pentHouse"> Penthouse</label></br>
+            <input type="radio" value="PENTHOUSE" name="subtype">
+            <label for="pentHouse"> Penthouse</label></br>
 
-        <input type="radio" value="SERVICE_FLAT" name="subtype">
-        <label for="serviceFlat"> Service Flat</label></br>
+            <input type="radio" value="SERVICE_FLAT" name="subtype">
+            <label for="serviceFlat"> Service Flat</label></br>
 
-        <input type="radio" value="TOWN_HOUSE" name="subtype">
-        <label for="townHouse"> Town House</label></br>
+            <input type="radio" value="TOWN_HOUSE" name="subtype">
+            <label for="townHouse"> Town House</label></br>
 
-        <input type="radio" value="TRIPLEX" name="subtype">
-        <label for="triplex"> Triplex</label></br>
+            <input type="radio" value="TRIPLEX" name="subtype">
+            <label for="triplex"> Triplex</label></br>
 
-        <input type="radio" value="VILLA" name="subtype">
-        <label for="villa"> Villa</label></br>
-        </br>
-    </form>
-    <button id="submit" type="submit" form="form1" value="Submit">Submit</button>
-
-
+            <input type="radio" value="VILLA" name="subtype">
+            <label for="villa"> Villa</label></br>
+            </br>
+        </form>
+        <div class="button-container-div">
+            <button id="submit" type="submit" form="form1" value="Submit">Submit</button>
+        </div>
+    </div>
 
     <script type="text/javascript " src="script.js "></script>
 </body>

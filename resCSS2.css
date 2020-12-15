@@ -1,0 +1,28 @@
+/* -----CSS for screen size (max-width:350px)----- */
+
+button {
+    padding: 4px;
+    font-size: 20px;
+}
+
+input[type=number],
+input[type=text] {
+    padding: 8px;
+}
+
+label {
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 15px;
+}
+
+p {
+    font-size: 12px;
+}
+
+div#real {
+    width: 80%;
+    margin: 10px 30% 10px 11%;
+}
