@@ -1,5 +1,7 @@
 # Bouman-Johnson-housing-project 
 
+# Click here to see the result -  https://saranyakannan-v.github.io/Bouman-Johnson-housing-project/.
+
 ## Objective of this project
 
 You work for a Housing Company called "ImmoEliza". You have been contacted by the R&D/AI department of your company because they need your skills.
