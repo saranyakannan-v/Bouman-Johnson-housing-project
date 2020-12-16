@@ -1,6 +1,6 @@
 # Bouman-Johnson-housing-project 
 
-### Click here to see the result -  https://saranyakannan-v.github.io/Bouman-Johnson-housing-project/.
+### Click here to see the result -  https://saranyakannan-v.github.io/Bouman-Johnson-housing-project/
 
 ## Objective of this project
 
